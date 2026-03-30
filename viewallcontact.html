@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Contacts</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #2c3e50;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .btn {
+            padding: 6px 10px;
+            margin-right: 5px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            color: white;
+        }
+
+        .details {
+            background-color: #3498db;
+        }
+
+        .edit {
+            background-color: #f39c12;
+        }
+
+        .delete {
+            background-color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Employee Contacts</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Department</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>John Doe</td>
+                <td>john@example.com</td>
+                <td>+254 712 345678</td>
+                <td>IT</td>
+                <td>
+                    <button class="btn details" onclick="viewDetails('John Doe')">Details</button>
+                    <button class="btn edit" onclick="editContact('John Doe')">Edit</button>
+                    <button class="btn delete" onclick="deleteContact()">Delete</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Jane Smith</td>
+                <td>jane@example.com</td>
+                <td>+254 798 654321</td>
+                <td>HR</td>
+                <td>
+                    <button class="btn details" onclick="viewDetails('Jane Smith')">Details</button>
+                    <button class="btn edit" onclick="editContact('Jane Smith')">Edit</button>
+                    <button class="btn delete" onclick="deleteContact()">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        function viewDetails(name) {
+            alert("Viewing details for " + name);
+        }
+
+        function editContact(name) {
+            alert("Edit alert for " + name);
+        }
+
+        function deleteContact() {
+            let confirmDelete = confirm("Are you sure you want to delete?");
+            if (confirmDelete) {
+                alert("Contact deleted (placeholder)");
+            }
+        }
+    </script>
+
+</body>
+</html>
